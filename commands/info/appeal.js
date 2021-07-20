@@ -12,8 +12,8 @@ module.exports = {
             "**Wat is je Discord Naam + Tag - Voorbeeld: Trispcs#0001**",
             "**Wat is de reden waarvoor je bent verbannen?**",
             "**Was de verbanning terecht volgens jou?**",
-            "**Wat ga je in de toekomst anders doen om niet nog een keer verbannen te worden?**",
             "**Wat is jou kant van het verhaal?**",
+            "**Wat ga je in de toekomst anders doen om niet nog een keer verbannen te worden?**",
             "**Extra Toevoegingen?**",
         ];
 
