@@ -1,7 +1,8 @@
 const {Collection, Client, Discord} = require('discord.js')
 const fs = require('fs')
 const client = new Client({
-    disableEveryone: true
+    disableEveryone: true,
+    partials : ["MESSAGE", "CHANNEL", "REACTION"]
 })
 const config = require('./config.json')
 const prefix = config.prefix
@@ -27,11 +28,6 @@ client.on('message', async message =>{
     let command = client.commands.get(cmd)
     if(!command) command = client.commands.get(client.aliases.get(cmd));
     if(command) command.run(client, message, args) 
-})
-//change client on line 4
-const client = new Client({
-    disableEveryone: true,
-    partials : ["MESSAGE", "CHANNEL", "REACTION"]
 });
 client.on('messageReactionAdd', async(reaction, user) => {
     if(reaction.message.partial) await reaction.message.fetch();
