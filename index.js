@@ -34,10 +34,10 @@ client.on('messageReactionAdd', async(reaction, user) => {
     if(reaction.partial) await reaction.fetch();
     if(user.bot) return;
     if(!reaction.message.guild) return;
-    if(reaction.message.id === '867011210280042507'){
+    if(reaction.message.id === '867015656128905257'){
         if(reaction.emoji.name === '✅') {
             await reaction.message.guild.members.cache.get(user.id).roles.add('862636435408289813')
-            user.send('You have obtained a role!')
+            user.send('Je hebt je succesvol geverifieerd!')
         }
     }
 })
@@ -46,10 +46,10 @@ client.on('messageReactionRemove', async(reaction, user) => {
     if(reaction.partial) await reaction.fetch();
     if(user.bot) return;
     if(!reaction.message.guild) return;
-    if(reaction.message.id === '867011210280042507'){
+    if(reaction.message.id === '867015656128905257'){
         if(reaction.emoji.name === '✅') {
             await reaction.message.guild.members.cache.get(user.id).roles.remove('862636435408289813')
-            user.send('One of your roles has been removed!')
+            user.send('Je hebt succesvol de rol weggehaald!')
         }
     }
 })
