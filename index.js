@@ -3,7 +3,7 @@ const fs = require('fs')
 const client = new Client({
     disableEveryone: true,
     partials : ["MESSAGE", "CHANNEL", "REACTION"]
-})
+});
 const config = require('./config.json')
 const prefix = config.prefix
 const token = config.token
